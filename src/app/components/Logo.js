@@ -3,6 +3,7 @@ import styles from './Logo.module.scss'
 
 const Logo = () => (
     <img
+        onClick={() => window.scrollTo(0, 0)}
         src="/logo.svg"
         alt="logo"
         className={styles.logo}
