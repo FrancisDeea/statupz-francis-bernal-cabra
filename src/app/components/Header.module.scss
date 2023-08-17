@@ -1,0 +1,39 @@
+@import '../styles/mixins';
+
+.container {
+    height: 70px;
+    display: grid;
+    align-content: center;
+    background-color: white;
+    top: -70px;
+    transition: all 0.1s ease-in;
+
+    .content_container {
+        @include flex(row);
+        justify-content: space-between;
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem;
+
+        ul {
+            list-style-type: none;
+            @include flex(row);
+            gap: 2rem;
+
+            li {
+                transition: transform 0.1s ease-in;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 1.1rem;
+                color: black;
+            }
+        }
+    }
+}

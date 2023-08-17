@@ -1,0 +1,14 @@
+@import '../styles/mixins';
+
+.container {
+    width: 100%;
+    @include flex(row);
+    gap: 3rem;
+    padding: 2rem 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 1rem 0rem;
+    }
+}
