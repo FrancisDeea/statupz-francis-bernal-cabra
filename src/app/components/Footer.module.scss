@@ -1,0 +1,79 @@
+@import '../styles/mixins';
+
+.container {
+    width: 100%;
+    background-color: ghostwhite;
+    font-size: 1rem;
+    display: grid;
+    align-content: center;
+
+
+    .content_container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1400px;
+        padding: 3rem 2rem;
+
+        @include flex(row);
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .brand {
+        max-width: 300px;
+        height: 180px;
+        @include flex(column);
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .companies {
+        @extend .brand;
+
+        ul {
+            list-style-type: none;
+
+            li {
+                padding: 0.2rem;
+            }
+        }
+    }
+
+    .contact {
+        @extend .brand;
+    }
+
+    .social {
+        @extend .brand;
+        justify-content: flex-start;
+
+        .social_container {
+            height: 100%;
+            @include flex(column);
+            gap: 1rem;
+
+            .icon {
+                font-size: 1.5rem;
+                color: #5fbbc7;
+                transition: transform 0.1s ease-in;
+
+                &:hover {
+                    transform: scale(1.2)
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .content_container {
+        justify-content: center !important;
+        gap: 4rem !important;
+    }
+
+    .brand {
+        flex: 50%;
+    }
+
+}
