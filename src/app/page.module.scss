@@ -214,6 +214,12 @@ section.contact {
 
             button {
                 background-color: #5fbbc7;
+                transition: transform 0.1s ease-in;
+
+                &:hover {
+                    background-color: #01b5cd;
+                    transform: scale(0.9);
+                }
             }
         }
     }
