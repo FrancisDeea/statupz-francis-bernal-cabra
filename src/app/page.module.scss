@@ -37,11 +37,12 @@ section.intro {
             flex: 45%;
             min-height: 50vh;
             padding: 2rem;
+            text-align: center;
 
             .intro_img {
                 width: 100%;
-                aspect-ratio: 1 / 1;
-                min-width: 350px;
+                aspect-ratio: 1/1;
+                max-width: 500px;
             }
         }
     }
@@ -226,6 +227,10 @@ section.contact {
 }
 
 @media screen and (max-width: 1000px) {
+    .intro_left_column, .intro_right_column {
+        flex: 100% !important;
+    }
+
     .quote {
         width: 100% !important;
     }
